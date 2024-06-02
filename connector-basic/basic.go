@@ -60,7 +60,7 @@ type ConnectorConfig struct {
 	UserUsernameJsonPath    string `json:"user_username_json_path"`
 	UserEmailJsonPath       string `json:"user_email_json_path"`
 	UserAvatarJsonPath      string `json:"user_avatar_json_path"`
-	CharacterLevelJsonPath  string `jspn:"user_level_json_path"`
+	UserLevelJsonPath       string `jspn:"user_level_json_path"`
 
 	CheckEmailVerified    bool   `json:"check_email_verified"`
 	EmailVerifiedJsonPath string `json:"email_verified_json_path"`
