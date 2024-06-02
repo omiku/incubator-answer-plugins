@@ -151,7 +151,7 @@ func (g *Connector) ConnectorReceiver(ctx *plugin.GinContext, receiverURL string
 
 	// level rank
 	if len(g.Config.CharacterLevelJsonPath) > 0 {
-		userInfo.Rank = gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).String()
+		userInfo.Rank = gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).Int()
 	} else {
 		return userInfo, nil
 	}
