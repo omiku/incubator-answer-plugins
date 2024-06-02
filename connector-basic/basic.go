@@ -227,6 +227,8 @@ func (g *Connector) ConfigFields() []plugin.ConfigField {
 		i18n.ConfigUserEmailJsonPathTitle, i18n.ConfigUserEmailJsonPathDescription, g.Config.UserEmailJsonPath, false))
 	fields = append(fields, createTextInput("user_avatar_json_path",
 		i18n.ConfigUserAvatarJsonPathTitle, i18n.ConfigUserAvatarJsonPathDescription, g.Config.UserAvatarJsonPath, false))
+	fields = append(fields, createTextInput("user_characterLevel",
+		i18n.ConfigLevelJsonPathTitle, i18n.ConfigLevelJsonPathDescription, g.Config.CharacterLevelJsonPath, false))
 	fields = append(fields, plugin.ConfigField{
 		Name:  "check_email_verified",
 		Type:  plugin.ConfigTypeSwitch,
@@ -240,8 +242,6 @@ func (g *Connector) ConfigFields() []plugin.ConfigField {
 		i18n.ConfigEmailVerifiedJsonPathTitle, i18n.ConfigEmailVerifiedJsonPathDescription, g.Config.EmailVerifiedJsonPath, false))
 	fields = append(fields, createTextInput("scope",
 		i18n.ConfigScopeTitle, i18n.ConfigScopeDescription, g.Config.Scope, false))
-	fields = append(fields, createTextInput("level",
-		i18n.ConfigLevelTitle, i18n.ConfigLevelDescription, g.Config.CharacterLevelJsonPath, false))
 	fields = append(fields, createTextInput("logo_svg",
 		i18n.ConfigLogoSVGTitle, i18n.ConfigLogoSVGDescription, g.Config.LogoSVG, false))
 
