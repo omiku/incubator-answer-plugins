@@ -240,7 +240,7 @@ func (g *Connector) ConfigFields() []plugin.ConfigField {
 	fields = append(fields, createTextInput("scope",
 		i18n.ConfigScopeTitle, i18n.ConfigScopeDescription, g.Config.Scope, false))
 	fields = append(fields, createTextInput("level",
-		i18n.ConfigLevelTitle, i18n.ConfigLevelDescription, g.Config.CharacterLevel, false))
+		i18n.ConfigLevelTitle, i18n.ConfigLevelDescription, g.Config.CharacterLevelJsonPath, false))
 	fields = append(fields, createTextInput("logo_svg",
 		i18n.ConfigLogoSVGTitle, i18n.ConfigLogoSVGDescription, g.Config.LogoSVG, false))
 
