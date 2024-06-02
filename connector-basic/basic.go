@@ -22,6 +22,7 @@ package basic
 import (
 	"context"
 	"encoding/json"
+	"errors"
 	"fmt"
 	"io"
 	"regexp"
@@ -153,7 +154,7 @@ func (g *Connector) ConnectorReceiver(ctx *plugin.GinContext, receiverURL string
 	if int(gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).Int()) > 15 {
 		userInfo.Rank = int(gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).Int())
 	} else {
-		return userInfo, nil
+		return userInfo, errors.New("invalid character level")
 	}
 
 	if len(g.Config.UserIDJsonPath) > 0 {
