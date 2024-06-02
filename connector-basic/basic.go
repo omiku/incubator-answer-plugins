@@ -60,7 +60,7 @@ type ConnectorConfig struct {
 	UserUsernameJsonPath    string `json:"user_username_json_path"`
 	UserEmailJsonPath       string `json:"user_email_json_path"`
 	UserAvatarJsonPath      string `json:"user_avatar_json_path"`
-	CharacterLevelJsonPath  string `jspn:"user_characterLevel"`
+	CharacterLevelJsonPath  string `jspn:"user_level_json_path"`
 
 	CheckEmailVerified    bool   `json:"check_email_verified"`
 	EmailVerifiedJsonPath string `json:"email_verified_json_path"`
@@ -227,7 +227,7 @@ func (g *Connector) ConfigFields() []plugin.ConfigField {
 		i18n.ConfigUserEmailJsonPathTitle, i18n.ConfigUserEmailJsonPathDescription, g.Config.UserEmailJsonPath, false))
 	fields = append(fields, createTextInput("user_avatar_json_path",
 		i18n.ConfigUserAvatarJsonPathTitle, i18n.ConfigUserAvatarJsonPathDescription, g.Config.UserAvatarJsonPath, false))
-	fields = append(fields, createTextInput("user_characterLevel",
+	fields = append(fields, createTextInput("user_level_json_path",
 		i18n.ConfigLevelJsonPathTitle, i18n.ConfigLevelJsonPathDescription, g.Config.CharacterLevelJsonPath, false))
 	fields = append(fields, plugin.ConfigField{
 		Name:  "check_email_verified",
