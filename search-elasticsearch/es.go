@@ -23,6 +23,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/apache/incubator-answer-plugins/util"
 	"strings"
 
 	"github.com/apache/incubator-answer-plugins/search-elasticsearch/i18n"
@@ -50,13 +51,16 @@ func init() {
 }
 
 func (s *SearchEngine) Info() plugin.Info {
+	info := &util.Info{}
+	info.GetInfo()
+
 	return plugin.Info{
 		Name:        plugin.MakeTranslator(i18n.InfoName),
-		SlugName:    "es_search",
+		SlugName:    info.SlugName,
 		Description: plugin.MakeTranslator(i18n.InfoDescription),
-		Author:      "answerdev",
-		Version:     "1.2.5",
-		Link:        "https://github.com/apache/incubator-answer-plugins/tree/main/search-elasticsearch",
+		Author:      info.Author,
+		Version:     info.Version,
+		Link:        info.Link,
 	}
 }
 

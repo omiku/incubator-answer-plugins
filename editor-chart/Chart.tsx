@@ -18,13 +18,12 @@
  */
 
 import { FC, useState } from 'react';
-import { Dropdown } from 'react-bootstrap';
+import { Button, Dropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
-import icon from './icon.svg';
 import { useRenderChart } from './hooks';
 
-interface ChartProps {
+export interface ChartProps {
   editor;
   previewElement: HTMLElement;
 }
@@ -32,7 +31,7 @@ interface ChartProps {
 const Chart: FC<ChartProps> = ({ editor, previewElement }) => {
   useRenderChart(previewElement);
   const { t } = useTranslation('plugin', {
-    keyPrefix: 'chart',
+    keyPrefix: 'chart_editor.frontend',
   });
   const [isLocked, setLockState] = useState(false);
 
@@ -148,9 +147,11 @@ const Chart: FC<ChartProps> = ({ editor, previewElement }) => {
       <Dropdown>
         <Dropdown.Toggle
           type="button"
-          as="button"
-          className="d-flex justify-content-center align-items-center p-0 b-0 btn-no-border btn btn-link">
-          <img src={icon} alt="chart" />
+          as={Button}
+          variant="link"
+          title={t('title')}
+          className="p-0 b-0 btn-no-border toolbar text-body">
+          <i className="bi bi-diagram-3-fill"></i>
         </Dropdown.Toggle>
         <Dropdown.Menu
           onMouseEnter={handleMouseEnter}

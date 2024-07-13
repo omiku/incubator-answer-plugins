@@ -21,6 +21,7 @@ package formula
 
 import (
 	"github.com/apache/incubator-answer-plugins/editor-formula/i18n"
+	"github.com/apache/incubator-answer-plugins/util"
 	"github.com/apache/incubator-answer/plugin"
 )
 
@@ -32,11 +33,15 @@ func init() {
 }
 
 func (d FormulaPlugin) Info() plugin.Info {
+	info := &util.Info{}
+	info.GetInfo()
+
 	return plugin.Info{
 		Name:        plugin.MakeTranslator(i18n.InfoName),
-		SlugName:    "formula_editor",
+		SlugName:    info.SlugName,
 		Description: plugin.MakeTranslator(i18n.InfoDescription),
-		Author:      "answerdev",
-		Version:     "1.2.5",
+		Author:      info.Author,
+		Version:     info.Version,
+		Link:        info.Link,
 	}
 }

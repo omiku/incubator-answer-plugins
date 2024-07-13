@@ -20,6 +20,7 @@
 package basic
 
 import (
+	"github.com/apache/incubator-answer-plugins/util"
 	"image/color"
 
 	"github.com/apache/incubator-answer-plugins/captcha-basic/i18n"
@@ -35,13 +36,16 @@ func init() {
 }
 
 func (c *Captcha) Info() plugin.Info {
+	info := &util.Info{}
+	info.GetInfo()
+
 	return plugin.Info{
 		Name:        plugin.MakeTranslator(i18n.InfoName),
-		SlugName:    "basic_captcha",
+		SlugName:    info.SlugName,
 		Description: plugin.MakeTranslator(i18n.InfoDescription),
-		Author:      "answerdev",
-		Version:     "1.0.0",
-		Link:        "https://github.com/apache/incubator-answer-plugins/tree/main/captcha-basic",
+		Author:      info.Author,
+		Version:     info.Version,
+		Link:        info.Link,
 	}
 }
 

@@ -22,6 +22,7 @@ package basic
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/apache/incubator-answer-plugins/util"
 	"strings"
 
 	"github.com/apache/incubator-answer-plugins/reviewer-basic/i18n"
@@ -47,13 +48,16 @@ func init() {
 }
 
 func (r *Reviewer) Info() plugin.Info {
+	info := &util.Info{}
+	info.GetInfo()
+
 	return plugin.Info{
 		Name:        plugin.MakeTranslator(i18n.InfoName),
-		SlugName:    "basic_reviewer",
+		SlugName:    info.SlugName,
 		Description: plugin.MakeTranslator(i18n.InfoDescription),
-		Author:      "answerdev",
-		Version:     "1.0.2",
-		Link:        "https://github.com/apache/incubator-answer-plugins/tree/main/reviewer-basic",
+		Author:      info.Author,
+		Version:     info.Version,
+		Link:        info.Link,
 	}
 }
 

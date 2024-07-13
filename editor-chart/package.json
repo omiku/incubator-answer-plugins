@@ -1,18 +1,19 @@
 {
-  "name": "editor_chart",
+  "name": "editor-chart",
   "private": true,
   "author": "Answer.dev",
-  "version": "0.0.1",
+  "version": "1.2.7",
   "files": [
     "dist",
     "README.md"
   ],
-  "main": "./dist/editor_chart.umd.js",
-  "module": "./dist/editor_chart.es.js",
+  "main": "./dist/editor-chart.umd.js",
+  "module": "./dist/editor-chart.es.js",
+  "types": "./dist/editor-chart.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/editor_chart.es.js",
-      "require": "./dist/editor_chart.umd.js"
+      "import": "./dist/editor-chart.es.js",
+      "require": "./dist/editor-chart.umd.js"
     }
   },
   "scripts": {
@@ -21,15 +22,29 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.3",
+    "@types/react": "^18.0.17"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    }
+  },
   "devDependencies": {
+    "@modyfi/vite-plugin-yaml": "^1.1.0",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint": "^8.45.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
-    "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "typescript": "5.4.2",
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.9.1"
   },
   "dependencies": {
     "mermaid": "^9.1.7"

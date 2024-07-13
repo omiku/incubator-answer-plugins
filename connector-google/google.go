@@ -23,6 +23,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"github.com/apache/incubator-answer-plugins/util"
 	"io"
 	"time"
 
@@ -42,7 +43,6 @@ type ConnectorConfig struct {
 }
 
 type AuthUserInfo struct {
-	ID            string `json:"id"`
 	Sub           string `json:"sub"`
 	Name          string `json:"name"`
 	GivenName     string `json:"given_name"`
@@ -61,13 +61,16 @@ func init() {
 }
 
 func (g *Connector) Info() plugin.Info {
+	info := &util.Info{}
+	info.GetInfo()
+
 	return plugin.Info{
 		Name:        plugin.MakeTranslator(i18n.InfoName),
-		SlugName:    "google_connector",
+		SlugName:    info.SlugName,
 		Description: plugin.MakeTranslator(i18n.InfoDescription),
-		Author:      "answerdev",
-		Version:     "1.2.5",
-		Link:        "https://github.com/apache/incubator-answer-plugins/tree/main/connector-google",
+		Author:      info.Author,
+		Version:     info.Version,
+		Link:        info.Link,
 	}
 }
 
@@ -127,7 +130,7 @@ func (g *Connector) ConnectorReceiver(ctx *plugin.GinContext, receiverURL string
 	}
 
 	userInfo = plugin.ExternalLoginUserInfo{
-		ExternalID:  respGoogleAuthUserInfo.ID,
+		ExternalID:  respGoogleAuthUserInfo.Sub,
 		DisplayName: respGoogleAuthUserInfo.Name,
 		Username:    respGoogleAuthUserInfo.Name,
 		Email:       respGoogleAuthUserInfo.Email,

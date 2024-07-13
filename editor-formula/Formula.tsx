@@ -18,15 +18,14 @@
  */
 
 import { FC, useState } from 'react';
-import { Dropdown } from 'react-bootstrap';
+import { Button, Dropdown } from 'react-bootstrap';
 import { useTranslation } from 'react-i18next';
 
 import 'katex/dist/katex.min.css';
 
-import icon from './icon.svg';
 import { useRenderFormula } from './hooks';
 
-interface FormulaProps {
+export interface FormulaProps {
   editor;
   previewElement: HTMLElement;
 }
@@ -34,7 +33,7 @@ interface FormulaProps {
 const Formula: FC<FormulaProps> = ({ editor, previewElement }) => {
   useRenderFormula(previewElement);
   const { t } = useTranslation('plugin', {
-    keyPrefix: 'formula',
+    keyPrefix: 'formula_editor.frontend',
   });
   const [isLocked, setLockState] = useState(false);
 
@@ -83,9 +82,11 @@ const Formula: FC<FormulaProps> = ({ editor, previewElement }) => {
       <Dropdown>
         <Dropdown.Toggle
           type="button"
-          as="button"
-          className="d-flex justify-content-center align-items-center p-0 b-0 btn-no-border btn btn-link">
-          <img src={icon} alt="formula" />
+          as={Button}
+          variant="link"
+          title={t('title')}
+          className="p-0 b-0 btn-no-border toolbar text-body">
+          <i className="bi bi-123" />
         </Dropdown.Toggle>
         <Dropdown.Menu
           onMouseEnter={handleMouseEnter}

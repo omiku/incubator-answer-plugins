@@ -17,12 +17,12 @@
  * under the License.
  */
 
-import { useEffect } from 'react';
+import { useEffect, RefObject } from 'react';
 
 // @ts-ignore
 import katexRender from 'katex/contrib/auto-render/auto-render';
 
-const useRenderFormula = (element: HTMLElement) => {
+const useRenderFormula = (element: HTMLElement | RefObject<HTMLElement> | null) => {
   const render = (element) => {
     katexRender(element, {
       delimiters: [
@@ -39,6 +39,7 @@ const useRenderFormula = (element: HTMLElement) => {
         { left: '\\(', right: '\\)', display: false },
         { left: '\\[', right: '\\]', display: true },
       ],
+      throwOnError: false,
     });
   };
   useEffect(() => {
@@ -46,16 +47,24 @@ const useRenderFormula = (element: HTMLElement) => {
       return;
     }
 
-    render(element);
+    let targetElement;
+    if (element instanceof HTMLElement) {
+      targetElement = element;
+    } else {
+      targetElement = element.current;
+    }
+    render(targetElement);
     const observer = new MutationObserver(() => {
-      render(element);
+      render(targetElement);
     });
 
-    observer.observe(element, {
+    observer.observe(targetElement, {
       childList: true,
-      attributes: true,
-      subtree: true,
     });
+
+    return () => {
+      observer.disconnect();
+    }
   }, [element]);
 };
 
