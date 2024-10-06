@@ -81,6 +81,11 @@ plugin:
             other: User Avatar JSON Path
           description:
             other: "Path in the OAuth2 User JSON to the user avatar. eg: user.avatar_url"
+        user_level_json_path:
+          title:
+            other: User Level Path
+          description:
+            other: "Path in the User JSON to the user level. eg: user.level"
         check_email_verified:
           title:
             other: Check Email Verified
