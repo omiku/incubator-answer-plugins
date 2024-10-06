@@ -76,6 +76,11 @@ plugin:
             other: 用户电子邮件JSON路径
           description:
             other: "OAuth2用户JSON中用户电子邮件的路径。例如：user.email"
+        user_level_json_path:
+          title:
+            other: 用户等级路径
+          description:
+            other: "OAuth2用户等的路径。例如：user.level"
         user_avatar_json_path:
           title:
             other: 用户头像JSON路径
