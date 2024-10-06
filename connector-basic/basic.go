@@ -158,7 +158,7 @@ func (g *Connector) ConnectorReceiver(ctx *plugin.GinContext, receiverURL string
 	}
 
 	// level rank
-	if int(gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).Int()) > 15 {
+	if int(gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).Int()) => 15 {
 		userInfo.Rank = int(gjson.GetBytes(data, g.Config.CharacterLevelJsonPath).Int())
 	} else {
 		return userInfo, errors.New("invalid character level")
