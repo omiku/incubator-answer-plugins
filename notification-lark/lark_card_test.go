@@ -25,7 +25,7 @@ import (
 	"os"
 	"testing"
 
-	answer "github.com/apache/incubator-answer-plugins/notification-lark"
+	answer "github.com/apache/answer-plugins/notification-lark"
 	lark "github.com/larksuite/oapi-sdk-go/v3"
 	larkIM "github.com/larksuite/oapi-sdk-go/v3/service/im/v1"
 )

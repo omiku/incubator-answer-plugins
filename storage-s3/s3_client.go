@@ -71,7 +71,7 @@ func (s *Client) PutObject(key, ext string, file io.ReadSeeker) (err error) {
 
 var (
 	// aclPublicRead is the environment variable for some special platforms such as digital ocean
-	// https://github.com/apache/incubator-answer-plugins/issues/97
+	// https://github.com/apache/answer-plugins/issues/97
 	aclPublicRead = os.Getenv("ACL_PUBLIC_READ")
 )
 

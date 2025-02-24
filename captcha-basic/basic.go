@@ -21,11 +21,11 @@ package basic
 
 import (
 	"embed"
-	"github.com/apache/incubator-answer-plugins/util"
+	"github.com/apache/answer-plugins/util"
 	"image/color"
 
-	"github.com/apache/incubator-answer-plugins/captcha-basic/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/captcha-basic/i18n"
+	"github.com/apache/answer/plugin"
 	"github.com/mojocn/base64Captcha"
 )
 

@@ -5,7 +5,7 @@
 
 ### Build
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/cdn-aliyun
+./answer build --with github.com/apache/answer-plugins/cdn-aliyun
 ```
 
 ### Configuration

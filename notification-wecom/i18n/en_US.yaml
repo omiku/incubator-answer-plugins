@@ -1,0 +1,93 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+
+plugin:
+  wecom_notification:
+    backend:
+      info:
+        name:
+          other: Wecom Notification
+        description:
+          other: Send notifications to Wecom
+      config:
+        tip:
+          title:
+            other: Push notification service has been turned off.
+        notification:
+          label:
+            other: Turn on push notifications
+          title:
+            other: Notifications
+          description:
+            other: Users will receive notifications on Wecom.
+      user_config:
+        webhook_url:
+          title:
+            other: Webhook URL
+        inbox_notifications:
+          title:
+            other: Inbox Notifications
+          label:
+            other: Turn on inbox notifications
+          description:
+            other: Answers to your questions, comments, invites, and more.
+        all_new_questions:
+          title:
+            other: All New Questions
+          label:
+            other: Turn on all new questions
+          description:
+            other: Get notified of all new questions. Up to 50 questions per week.
+        new_questions_for_following_tags:
+          title:
+            other: New Questions for Following Tags
+          label:
+            other: Turn on new questions for following tags
+          description:
+            other: Get notified of new questions for following tags.
+      tpl:
+        update_question:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) updated question [{{.QuestionTitle}}]({{.QuestionUrl}})"
+        answer_the_question:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) answered the question [{{.QuestionTitle}}]({{.AnswerUrl}})"
+        update_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) updated answer [{{.QuestionTitle}}]({{.AnswerUrl}})"
+        accept_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) accepted answer [{{.QuestionTitle}}]({{.AnswerUrl}})"
+        comment_question:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) commented question [{{.QuestionTitle}}]({{.CommentUrl}})"
+        comment_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) commented answer [{{.QuestionTitle}}]({{.CommentUrl}})"
+        reply_to_you:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) replied you [{{.QuestionTitle}}]({{.CommentUrl}})"
+        mention_you:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) mentioned you [{{.QuestionTitle}}]({{.CommentUrl}})"
+        invited_you_to_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) invited you to answer [{{.QuestionTitle}}]({{.QuestionUrl}})"
+        new_question:
+          text:
+            other: "New question:\n[{{.QuestionTitle}}]({{.QuestionUrl}})\n Tag: {{.QuestionTags}}"

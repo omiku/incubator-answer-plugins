@@ -7,7 +7,7 @@
 
 ### Build
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/search-elasticsearch
+./answer build --with github.com/apache/answer-plugins/search-elasticsearch
 ```
 
 ### Configuration

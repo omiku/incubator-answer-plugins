@@ -19,7 +19,7 @@
 
 package es
 
-import "github.com/apache/incubator-answer/plugin"
+import "github.com/apache/answer/plugin"
 
 var indexJson = `
 {

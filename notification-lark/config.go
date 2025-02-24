@@ -23,8 +23,8 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/apache/incubator-answer-plugins/notification-lark/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/notification-lark/i18n"
+	"github.com/apache/answer/plugin"
 	lark "github.com/larksuite/oapi-sdk-go/v3"
 	larkCore "github.com/larksuite/oapi-sdk-go/v3/core"
 	larkWebSocket "github.com/larksuite/oapi-sdk-go/v3/ws"

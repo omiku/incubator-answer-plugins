@@ -22,7 +22,7 @@ package lark_test
 import (
 	"testing"
 
-	answer "github.com/apache/incubator-answer-plugins/notification-lark"
+	answer "github.com/apache/answer-plugins/notification-lark"
 )
 
 func TestGenRandomStr(t *testing.T) {

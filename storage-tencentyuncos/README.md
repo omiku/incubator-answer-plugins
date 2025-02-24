@@ -7,7 +7,7 @@
 ### Build
 
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/storage-tencentyuncos
+./answer build --with github.com/apache/answer-plugins/storage-tencentyuncos
 ```
 
 ### Configuration

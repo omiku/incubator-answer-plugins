@@ -5,7 +5,7 @@
 
 ### Build
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/search-meilisearch
+./answer build --with github.com/apache/answer-plugins/search-meilisearch
 ```
 
 ### Configuration

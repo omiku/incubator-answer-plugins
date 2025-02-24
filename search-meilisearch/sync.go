@@ -21,7 +21,7 @@ package meilisearch
 
 import (
 	"context"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer/plugin"
 	"github.com/segmentfault/pacman/log"
 )
 

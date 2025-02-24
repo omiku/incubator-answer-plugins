@@ -22,8 +22,8 @@ package wecom
 import (
 	"strings"
 
-	wecomI18n "github.com/apache/incubator-answer-plugins/user-center-wecom/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	wecomI18n "github.com/apache/answer-plugins/user-center-wecom/i18n"
+	"github.com/apache/answer/plugin"
 	"github.com/segmentfault/pacman/i18n"
 	"github.com/segmentfault/pacman/log"
 	"github.com/silenceper/wechat/v2/work/message"

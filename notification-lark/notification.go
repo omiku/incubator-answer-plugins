@@ -26,9 +26,9 @@ import (
 	"fmt"
 	"strings"
 
-	lark_i18n "github.com/apache/incubator-answer-plugins/notification-lark/i18n"
-	"github.com/apache/incubator-answer-plugins/util"
-	"github.com/apache/incubator-answer/plugin"
+	lark_i18n "github.com/apache/answer-plugins/notification-lark/i18n"
+	"github.com/apache/answer-plugins/util"
+	"github.com/apache/answer/plugin"
 
 	"github.com/segmentfault/pacman/i18n"
 	"github.com/segmentfault/pacman/log"

@@ -20,7 +20,7 @@
 package basic
 
 import (
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer/plugin"
 	"github.com/go-resty/resty/v2"
 	"github.com/segmentfault/pacman/log"
 )

@@ -21,9 +21,9 @@ package chart
 
 import (
 	"embed"
-	"github.com/apache/incubator-answer-plugins/editor-chart/i18n"
-	"github.com/apache/incubator-answer-plugins/util"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/editor-chart/i18n"
+	"github.com/apache/answer-plugins/util"
+	"github.com/apache/answer/plugin"
 )
 
 //go:embed  info.yaml

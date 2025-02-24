@@ -25,10 +25,6 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
-	"github.com/apache/incubator-answer-plugins/cdn-s3/i18n"
-	"github.com/apache/incubator-answer-plugins/util"
-	"github.com/apache/incubator-answer/ui"
-	"github.com/segmentfault/pacman/log"
 	"io"
 	"io/fs"
 	"net/http"
@@ -38,7 +34,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/cdn-s3/i18n"
+	"github.com/apache/answer-plugins/util"
+	"github.com/apache/answer/plugin"
+	"github.com/apache/answer/ui"
+	"github.com/segmentfault/pacman/log"
 )
 
 var (

@@ -1,0 +1,92 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+plugin:
+  wecom_notification:
+    backend:
+      info:
+        name:
+          other: 企业微信通知
+        description:
+          other: 发送通知到企业微信
+      config:
+        tip:
+          title:
+            other: 推送通知服务已关闭。
+        notification:
+          label:
+            other: 打开通知
+          title:
+            other: 通知
+          description:
+            other: 用户将在企业微信上收到通知。
+      user_config:
+        webhook_url:
+          title:
+            other: Webhook URL
+        inbox_notifications:
+          title:
+            other: 收件箱通知
+          label:
+            other: 打开收件箱通知
+          description:
+            other: 问题的答案、评论、邀请等。
+        all_new_questions:
+          title:
+            other: 所有新问题通知
+          label:
+            other: 打开所有新问题通知
+          description:
+            other: 收到所有新问题的通知。每周最多 50 个问题。
+        new_questions_for_following_tags:
+          title:
+            other: 关注标签的新问题通知
+          label:
+            other: 打开关注标签的新问题通知
+          description:
+            other: 收到以下标签的新问题通知。
+      tpl:
+        update_question:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 更新问题 [{{.QuestionTitle}}]({{.QuestionUrl}})"
+        answer_the_question:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 回答了问题 [{{.QuestionTitle}}]({{.AnswerUrl}})"
+        update_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 更新答案 [{{.QuestionTitle}}]({{.AnswerUrl}})"
+        accept_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 接受答案 [{{.QuestionTitle}}]({{.AnswerUrl}})"
+        comment_question:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 评论提问 [{{.QuestionTitle}}]({{.CommentUrl}})"
+        comment_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 评论回答 [{{.QuestionTitle}}]({{.CommentUrl}})"
+        reply_to_you:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 回复了问题 [{{.QuestionTitle}}]({{.CommentUrl}})"
+        mention_you:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 提到了你 [{{.QuestionTitle}}]({{.CommentUrl}})"
+        invited_you_to_answer:
+          text:
+            other: "[{{.TriggerUserDisplayName}}]({{.TriggerUserUrl}}) 邀请你回答 [{{.QuestionTitle}}]({{.QuestionUrl}})"
+        new_question:
+          text:
+            other: "新问题:\n [{{.QuestionTitle}}]({{.QuestionUrl}}) \n 标签: {{.QuestionTags}}"

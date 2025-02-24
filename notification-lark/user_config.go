@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/apache/incubator-answer-plugins/notification-lark/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/notification-lark/i18n"
+	"github.com/apache/answer/plugin"
 
 	"github.com/segmentfault/pacman/log"
 )

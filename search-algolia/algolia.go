@@ -22,14 +22,14 @@ package algolia
 import (
 	"context"
 	"embed"
-	"github.com/apache/incubator-answer-plugins/util"
 	"strconv"
 	"strings"
 
 	"github.com/algolia/algoliasearch-client-go/v3/algolia/opt"
 	"github.com/algolia/algoliasearch-client-go/v3/algolia/search"
-	"github.com/apache/incubator-answer-plugins/search-algolia/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/search-algolia/i18n"
+	"github.com/apache/answer-plugins/util"
+	"github.com/apache/answer/plugin"
 )
 
 //go:embed  info.yaml
@@ -64,6 +64,7 @@ func (s *SearchAlgolia) Description() plugin.SearchDesc {
 	desc := plugin.SearchDesc{}
 	if s.Config.ShowLogo {
 		desc.Icon = icon
+		desc.Link = "https://www.algolia.com/"
 	}
 	return desc
 }
@@ -247,21 +248,13 @@ func (s *SearchAlgolia) SearchAnswers(ctx context.Context, cond *plugin.SearchBa
 
 // UpdateContent updates the content to algolia server
 func (s *SearchAlgolia) UpdateContent(ctx context.Context, content *plugin.SearchContent) (err error) {
-	res, err := s.getIndex("").SaveObject(content)
-	if err != nil {
-		return
-	}
-	err = res.Wait()
+	_, err = s.getIndex("").SaveObject(content)
 	return
 }
 
 // DeleteContent deletes the content
 func (s *SearchAlgolia) DeleteContent(ctx context.Context, contentID string) (err error) {
-	res, err := s.getIndex("").DeleteObject(contentID)
-	if err != nil {
-		return err
-	}
-	err = res.Wait()
+	_, err = s.getIndex("").DeleteObject(contentID)
 	return
 }
 

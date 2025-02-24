@@ -1,11 +1,11 @@
-# Aliyun OSS Storage (preview)
+# Aliyun OSS Storage
 > This plugin can be used to store attachments and avatars to Aliyun OSS.
 
 ## How to use
 
 ### Build
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/storage-aliyunoss
+./answer build --with github.com/apache/answer-plugins/storage-aliyunoss
 ```
 
 ### Configuration
@@ -15,4 +15,3 @@
 - `Access Key Id` - AccessKeyID of the AliCloud OSS storage
 - `Access Key Secret` - AccessKeySecret of the AliCloud OSS storage
 - `Visit Url Prefix` - Prefix of access address for the uploaded file, ending with '/' such as https://example.com/xxx/
-- `Max File Size` - Max file size in MB, default is 10MB

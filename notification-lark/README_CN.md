@@ -7,7 +7,7 @@
 要在应用程序中使用飞书通知插件，请使用以下命令进行安装：
 
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/notification-lark
+./answer build --with github.com/apache/answer-plugins/notification-lark
 ```
 
 ## 如何配置

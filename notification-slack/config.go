@@ -17,13 +17,13 @@
  * under the License.
  */
 
-package slack
+package slack_notification
 
 import (
 	"encoding/json"
 
-	"github.com/apache/incubator-answer-plugins/notification-slack/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/notification-slack/i18n"
+	"github.com/apache/answer/plugin"
 )
 
 type NotificationConfig struct {

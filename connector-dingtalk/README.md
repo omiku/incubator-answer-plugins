@@ -5,7 +5,7 @@
 
 ### Build
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/connector-dingtalk
+./answer build --with github.com/apache/answer-plugins/connector-dingtalk
 ```
 
 ### Configuration
@@ -30,7 +30,7 @@ RUN apk --no-cache add \
 RUN go env -w GOPROXY=https://goproxy.cn,direct
 
 RUN answer build \
-    --with github.com/apache/incubator-answer-plugins/connector-dingtalk \
+    --with github.com/apache/answer-plugins/connector-dingtalk \
     --output /usr/bin/new_answer
 
 FROM alpine

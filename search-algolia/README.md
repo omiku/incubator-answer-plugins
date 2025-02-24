@@ -11,7 +11,7 @@
 
 ### Build
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/search-algolia
+./answer build --with github.com/apache/answer-plugins/search-algolia
 ```
 
 ### Configuration

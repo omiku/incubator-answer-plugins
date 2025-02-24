@@ -22,9 +22,9 @@ package algolia
 import (
 	_ "embed"
 	"encoding/json"
-	"github.com/apache/incubator-answer-plugins/search-algolia/i18n"
+	"github.com/apache/answer-plugins/search-algolia/i18n"
 
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer/plugin"
 )
 
 var (

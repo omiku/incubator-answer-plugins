@@ -21,13 +21,13 @@ package recaptcha
 
 import (
 	"embed"
-	"github.com/apache/incubator-answer-plugins/util"
+	"github.com/apache/answer-plugins/util"
 	"io"
 	"net/http"
 	"time"
 
-	"github.com/apache/incubator-answer-plugins/captcha-google-v2/i18n"
-	"github.com/apache/incubator-answer/plugin"
+	"github.com/apache/answer-plugins/captcha-google-v2/i18n"
+	"github.com/apache/answer/plugin"
 
 	"encoding/json"
 
@@ -42,8 +42,8 @@ type Captcha struct {
 }
 
 type CaptchaConfig struct {
-	SiteKey   string `json:"site_key"`
-	SecretKey string `json:"secret_key"`
+	SiteKey            string `json:"site_key"`
+	SecretKey          string `json:"secret_key"`
 	SiteVerifyEndpoint string `json:"site_verify_endpoint"`
 }
 

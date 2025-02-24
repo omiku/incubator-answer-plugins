@@ -7,7 +7,7 @@
 To use the NotificationLark plugin with your application, install it using the following command:
 
 ```bash
-./answer build --with github.com/apache/incubator-answer-plugins/notification-lark
+./answer build --with github.com/apache/answer-plugins/notification-lark
 ```
 
 ## How to config

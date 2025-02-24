@@ -20,23 +20,23 @@ plugin:
     backend:
       info:
         name:
-          other: Akismet Anti-Spam
+          other: Akismet 反垃圾
         description:
-          other: Akismet Anti-Spam is used to check the content of posts and comments against the Akismet web service to see if they look like spam.
+          other: Akismet 反垃圾用于检查帖子和评论内容，以确定它们是否像垃圾内容。
       config:
         api_key:
           title:
             other: API Key
           label:
-            other: Enter your Akismet API key
+            other: 输入你的 Akismet API key
           description:
-            other: Your Akismet API key. <a href="https://akismet.com/account/" target="_blank">Manage your API keys.</a>
+            other: 你的 Akismet API key. <a href="https://akismet.com/account/" target="_blank">管理你的 API keys.</a>
         span_filtering:
           title:
-            other: Span Filtering
+            other: 垃圾内容过滤
           review:
-            other: Put spam in the review queue
+            other: 将垃圾内容放入审核队列
           delete:
-            other: Silently delete the spam
+            other: 静默地删除垃圾内容
       comment:
-        need_review: Needs approval.
+        need_review: 需要批准。
